@@ -8,9 +8,9 @@ export const TodoList: React.FC = () => {
   const completeTodo = (e: ChangeEvent<HTMLInputElement>) => {
     let id = e.target.value;
     let index = todos.findIndex(todo => todo.id == id);
-    let newArray = [...todos];
-    newArray[index] = { ...newArray[index], completed: !newArray[index].completed }
-    setTodo(newArray);
+    let todoList = [...todos];
+    todoList[index] = { ...todoList[index], completed: !todoList[index].completed }
+    setTodo(todoList);
   };
 
   const todoList = todos
