@@ -4,10 +4,13 @@ import { todosState } from "../state";
 
 export const numTodosState = selector({
   key: 'numTodos',
-  get: ({ get }) => (get(todosState).length)
+  get: ({ get }) => {
+    let todos = get(todosState);
+    return todos.filter(todo => !todo.completed).length;
+  }
 });
 
 export const NumTodos: React.FC = () => {
   const numTodos = useRecoilValue(numTodosState);
-  return <div>Num todos: {numTodos}</div>;
+  return <div>Active todos: {numTodos}</div>;
 }

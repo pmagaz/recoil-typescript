@@ -1,6 +1,12 @@
 import { atom } from "recoil";
 
-const initialState: String[] = [];
+export interface Todo {
+  id: string,
+  name: string;
+  completed: boolean;
+}
+
+const initialState: Todo[] = [];
 
 export const todosState = atom({
   key: 'todos',
