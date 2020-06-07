@@ -1,5 +1,6 @@
 {
   "name": "recoil-typescript-test",
+  "author": "Pablo Magaz",
   "version": "0.1.0",
   "private": false,
   "devDependencies": {
