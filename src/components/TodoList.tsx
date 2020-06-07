@@ -2,10 +2,6 @@ import React, { ChangeEvent } from 'react';
 import { useRecoilState } from "recoil";
 import { Todo, todosState } from "../state";
 
-const updateTodo = (tasks: Todo[], key: number, newTask: Todo) => {
-  return [...tasks.slice(0, key), newTask, ...tasks.slice(key + 1)]
-}
-
 export const TodoList: React.FC = () => {
   const [todos, setTodo] = useRecoilState(todosState);
 
