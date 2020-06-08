@@ -1,10 +1,10 @@
 import React, { ChangeEvent, MouseEvent, useState } from 'react';
-import { useRecoilState } from "recoil";
+import { useSetRecoilState } from "recoil";
 import { todosState } from '../state';
 
 export const NewTodo: React.FC = () => {
   const [todoName, setTodoName] = useState("");
-  const [todos, setTodos] = useRecoilState(todosState);
+  const setTodos = useSetRecoilState(todosState);
 
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     let todoName = e.target.value;
