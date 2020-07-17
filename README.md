@@ -6,7 +6,7 @@ This example uses [Recoil](https://recoiljs.org/) and [Typescript](https://www.t
 
 Clone the repository & install dependencies:
 ```
-$ git clone https://github.com/pmagaz/recoil-typescript-example
+$ git clone https://github.com/pmagaz/recoil-typescript
 $ yarn / npm install
 ```
 
